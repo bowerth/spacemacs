@@ -24,3 +24,12 @@
 
 (defvar scala-auto-start-ensime nil
   "If non nil then ensime will be started when a scala file is opened.")
+
+(fset 'send-line-repl
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 33554437 M-return 115 114 right] 0 "%d")) arg)))
+
+(fset 'send-region-repl
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 134217797 M-return 115 114 right] 0 "%d")) arg)))
+
+(global-set-key (kbd "C-<return>") 'send-line-repl)`
+(global-set-key (kbd "C-x C-\\") 'send-region-repl)
