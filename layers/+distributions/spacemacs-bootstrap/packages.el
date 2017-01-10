@@ -1,6 +1,6 @@
 ;;; packages.el --- Mandatory Bootstrap Layer packages File
 ;;
-;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
+;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
 ;; Author: Sylvain Benner <sylvain.benner@gmail.com>
 ;; URL: https://github.com/syl20bnr/spacemacs
@@ -135,6 +135,7 @@
 
   (define-key evil-normal-state-map (kbd "K") 'spacemacs/evil-smart-doc-lookup)
   (define-key evil-normal-state-map (kbd "gd") 'spacemacs/jump-to-definition)
+  (define-key evil-normal-state-map (kbd "gD") 'spacemacs/jump-to-definition-other-window)
 
   ;; scrolling transient state
   (spacemacs|define-transient-state scroll
@@ -311,6 +312,10 @@
   (push '(("\\(.*\\) 0" . "select-window-0") . ("\\1 0..9" . "window 0..9"))
         which-key-replacement-alist)
   (push '((nil . "select-window-[1-9]") . t) which-key-replacement-alist)
+
+  (push '(("\\(.*\\) 1" . "buffer-to-window-1") . ("\\1 1..9" . "buffer to window 1..9"))
+        which-key-replacement-alist)
+  (push '((nil . "buffer-to-window-[2-9]") . t) which-key-replacement-alist)
 
   (dolist (leader-key `(,dotspacemacs-leader-key ,dotspacemacs-emacs-leader-key))
     (which-key-add-key-based-replacements
