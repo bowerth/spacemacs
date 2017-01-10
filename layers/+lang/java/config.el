@@ -11,3 +11,8 @@
 (spacemacs|defvar-company-backends java-mode)
 
 (spacemacs|define-jump-handlers java-mode)
+
+(custom-set-variables
+ '(eclim-eclipse-dirs '("~/eclipse"))
+ '(eclim-executable "~/eclipse/eclim")
+ '(eclimd-executable "~/eclipse/eclimd"))
