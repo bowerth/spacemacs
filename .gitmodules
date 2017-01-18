@@ -1,0 +1,3 @@
+[submodule "layers/+emacs/org-scrum"]
+	path = layers/+emacs/org-scrum
+	url = git@github.com:myspacemacs/org-scrum.git
