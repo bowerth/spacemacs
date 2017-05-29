@@ -26,7 +26,8 @@
 
 (setq mu4e-headers-skip-duplicates t)
 
-(setq mu4e-get-mail-command "offlineimap")
+;; (setq mu4e-get-mail-command "offlineimap")
+(setq mu4e-get-mail-command "mbsync -V gmail")
 
 (setq mu4e-maildir "~/Maildir")
 

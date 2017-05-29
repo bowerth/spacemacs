@@ -17,8 +17,10 @@
 (defvar org-enable-github-support nil
   "If non-nil Github related packages are configured.")
 
-(defvar org-enable-reveal-js-support nil
+(defvar org-enable-reveal-js-support t
   "If non-nil, enable export to reveal.js.")
+
+(setq org-reveal-root "../reveal.js")
 
 (defvar org-projectile-file "TODOs.org"
   "The file to store project TODOs in. If this is a relative
